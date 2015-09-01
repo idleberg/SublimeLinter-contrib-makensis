@@ -2,7 +2,7 @@ SublimeLinter-contrib-makensis
 ================================
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis.svg?branch=master)](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis)
+[![Travis CI](https://img.shields.io/travis/idleberg/SublimeLinter-contrib-makensis/master.svg?style=flat-square)](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
 
