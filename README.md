@@ -19,7 +19,7 @@ Download and install NSIS 2.46 (or later) from [SourceForge](https://sourceforge
 
 Install `makensis` from your distribution's default package manager, for example:
 
-   ```
+   ``` bash
    # Debian
    sudo apt-get install nsis
 
@@ -31,7 +31,7 @@ Install `makensis` from your distribution's default package manager, for example
 
 Install `makensis` through [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/)
 
-   ```
+   ``` bash
    # Homebrew
    brew install nsis
 
