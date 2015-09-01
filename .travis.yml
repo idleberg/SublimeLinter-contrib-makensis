@@ -1,3 +1,4 @@
+sudo: false
 language: python
 python:
   - "3.3"
@@ -9,3 +10,5 @@ install:
 script:
   - flake8 . --max-line-length=120
   - pep257 . --ignore=D202
+notifications:
+  email: false
