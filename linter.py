@@ -15,6 +15,7 @@
 from SublimeLinter.lint import Linter, util
 from sys import platform as _platform
 
+
 class Makensis(Linter):
 
     """Provides an interface to makensis."""
