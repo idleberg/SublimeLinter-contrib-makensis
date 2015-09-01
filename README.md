@@ -1,7 +1,7 @@
 SublimeLinter-contrib-makensis
 ================================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-makensis.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-makensis)
+[![Build Status](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis.svg?branch=master)](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
 
@@ -33,7 +33,7 @@ Install `makensis` through [Homebrew](http://brew.sh/) or [MacPorts](https://www
 
    ``` bash
    # Homebrew
-   brew install nsis
+   brew install makensis
 
    # MacPorts
    ports install nsis
