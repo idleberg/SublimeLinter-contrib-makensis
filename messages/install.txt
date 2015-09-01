@@ -1,0 +1,11 @@
+SublimeLinter-contrib-makensis
+-------------------------------
+This linter plugin for SublimeLinter uses makensis to lint scripts without ever
+compiling them. To do so, an error message is inserted at the end of your 
+script.
+
+** IMPORTANT! **
+
+For details, please refer to the official repository:
+
+https://github.com/idleberg/SublimeLinter-contrib-makensis
