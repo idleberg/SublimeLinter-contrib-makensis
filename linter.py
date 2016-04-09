@@ -3,12 +3,13 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Jan T. Sott
-# Copyright (c) 2015 Jan T. Sott
+# Copyright (c) 2016 Jan T. Sott
 #
 # https://github.com/idleberg/SublimeLinter-contrib-makensis
 #
 # License: MIT
 #
+
 
 """This module exports the Makensis plugin class."""
 
@@ -22,29 +23,21 @@ class Makensis(Linter):
 
     if _platform == "win32":
         syntax = 'nsis'
-        cmd = ('makensis', '@', '-X!error END_OF_LINTING')
-        version_args = '-VERSION'
+        cmd = ('makensis', '-V2', '@', '/X!error "Abort linting"')
+        version_args = '/VERSION'
         version_re = r'(?P<version>\d+\.\d+)'
         version_requirement = '>= 2.46'
-    elif _platform == "darwin":
+    else:
         syntax = 'nsis'
-        cmd = ('makensis', '@', '-X!error END_OF_LINTING')
+        cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
         version_args = '-VERSION'
-        # version_re = r'(?P<version>\d+\.\d+)'
-        # version_re = 'v12-Mar-2015.cvs~'
-        # version_requirement = '>= 2.46'
+        version_re = r'v\d+-\w{3}-(?P<version>\d)\.cvs'
+        version_requirement = '>= 2015'
 
     regex = (
-
-        r'^(Error in script\:? \"(.+?)\" on line (?P<line>\d+) -- aborting creating process)'
+        # r'(?P<warning>warning): (?P<message>.*) \(.*:(?P<line>\d+)\)'
+        r'(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$'
     )
     multiline = True
+    error_stream = util.STREAM_STDOUT
     line_col_base = (1, 1)
-    tempfile_suffix = None
-    error_stream = util.STREAM_BOTH
-    selectors = {}
-    word_re = None
-    defaults = {}
-    inline_settings = None
-    inline_overrides = None
-    comment_re = None
