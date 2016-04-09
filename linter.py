@@ -22,18 +22,17 @@ class Makensis(Linter):
     """Provides an interface to the makensis executable."""
 
     if _platform == "win32":
-        syntax = 'nsis'
-        cmd = ('makensis', '-V2', '@', '/X!error "Abort linting"')
+        cmd = ('makensis', '/V2', '@', '/X!error "Abort linting"')
         version_args = '/VERSION'
         version_re = r'(?P<version>\d+\.\d+)'
         version_requirement = '>= 2.46'
     else:
-        syntax = 'nsis'
         cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
         version_args = '-VERSION'
         version_re = r'v\d+-\w{3}-(?P<version>\d)\.cvs'
         version_requirement = '>= 2015'
 
+    syntax = 'nsis'
     regex = (
         # r'(?P<warning>warning): (?P<message>.*) \(.*:(?P<line>\d+)\)'
         r'(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$'
