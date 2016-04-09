@@ -14,7 +14,7 @@ Before using this plugin, you must ensure that `makensis` is installed on your s
 
 #### Windows
 
-Download and install NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis)
+Download NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis) and run setup
 
 #### Linux
 
@@ -56,16 +56,6 @@ To install via Package Control, do the following:
 
 1. When the plugin list appears, type `makensis`. Among the entries you should see `SublimeLinter-contrib-makensis`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
-## Settings
-For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
-
-In addition to the standard SublimeLinter settings, SublimeLinter-contrib-makensis provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
-
-|Setting|Description|Inline Setting|Inline Override|
-|:------|:----------|:------------:|:-------------:|
-|foo|Something.|&#10003;| |
-|bar|Something else.| |&#10003;|
-
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
@@ -89,6 +79,3 @@ Thank you for helping out!
 [locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
 [pc]: https://sublime.wbond.net/installation
 [cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
-[settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html
-[linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
-[inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
