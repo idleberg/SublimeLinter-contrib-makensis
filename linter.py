@@ -19,7 +19,7 @@ from sys import platform as _platform
 
 class Makensis(Linter):
 
-    """Provides an interface to makensis."""
+    """Provides an interface to the makensis executable."""
 
     if _platform == "win32":
         syntax = 'nsis'
