@@ -2,6 +2,8 @@ SublimeLinter-contrib-makensis
 ================================
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Package Control](https://packagecontrol.herokuapp.com/downloads/SublimeLinter-contrib-makensis.svg?style=flat-square)](https://packagecontrol.io/packages/SublimeLinter-contrib-makensis)
+[![GitHub](https://img.shields.io/github/release/idleberg/SublimeLinter-contrib-makensis.svg?style=flat-square)](https://github.com/idleberg/SublimeLinter-contrib-makensis/releases)
 [![Travis CI](https://img.shields.io/travis/idleberg/SublimeLinter-contrib-makensis/master.svg?style=flat-square)](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
@@ -30,14 +32,11 @@ Install `makensis` from your distribution's default package manager, for example
 
 #### Mac OS X
 
-Install `makensis` through [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/)
+Install `makensis` through [Homebrew](http://brew.sh/)sublim
 
    ``` bash
    # Homebrew
-   brew install makensis
-
-   # MacPorts
-   ports install nsis
+   brew install nsis
    ```
 
 **Note:** This plugin requires `makensis` 2.46 or later.
