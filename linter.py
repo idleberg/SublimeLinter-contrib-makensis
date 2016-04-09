@@ -30,6 +30,7 @@ class Makensis(Linter):
         cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
         version_args = '-VERSION'
         version_re = r'v\d+-\w{3}-(?P<version>\d)\.cvs'
+        # v12-Mar-2015.cvs~ == v2.46
         version_requirement = '>= 2015'
 
     syntax = 'nsis'
