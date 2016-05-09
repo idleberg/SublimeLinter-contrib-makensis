@@ -8,5 +8,5 @@ install:
   - pip install pep257
 # command to run tests
 script:
-  - flake8 . --max-line-length=120
+  - flake8 . --max-line-length=160
   - pep257 . --ignore=D202,D211
