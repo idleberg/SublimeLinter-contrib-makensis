@@ -10,7 +10,7 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [makensis]
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/SublimeLinter-contrib-makensis/master/screenshot.png)
 
-*Screenshot in Sublime Text (using [Hopscotch](https://github.com/idleberg/Hopscotch) color scheme)*
+*Linter in action (using [Hopscotch](https://github.com/idleberg/Hopscotch) color scheme)*
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
