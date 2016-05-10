@@ -8,6 +8,8 @@ SublimeLinter-contrib-makensis
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
 
+![Screenshot](https://raw.githubusercontent.com/idleberg/SublimeLinter-contrib-makensis/master/screenshot.png)
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
