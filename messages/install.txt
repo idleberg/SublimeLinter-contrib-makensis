@@ -27,7 +27,7 @@ Installation
 
   Install `makensis` useing the default package manager
 
-    # Debian
+    # Debian / Ubuntu
     $ sudo apt-get install nsis
 
     # Red Hat
