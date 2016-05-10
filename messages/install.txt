@@ -31,7 +31,7 @@ Installation
     $ sudo apt-get install nsis
 
     # Red Hat
-    $ sudo yum install nsis
+    $ sudo dnf install nsis
 
 Feedback & Issues
 -----------------
