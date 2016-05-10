@@ -1,8 +1,6 @@
 Description
 -----------
-This linter plugin for SublimeLinter uses makensis to lint scripts without ever
-compiling them. To do so, an error message is inserted at the end of your 
-script.
+This linter plugin for SublimeLinter uses makensis to lint NSIS scripts
 
 Installation
 ------------
@@ -10,15 +8,17 @@ Installation
   Windows
   -------
 
-  * Install NSIS 2.46 (or later) from https://sourceforge.net/p/nsis
-  * Make sure makensis is in your PATH environmental variable. See http://superuser.com/a/284351/195953
+  * Install NSIS 2.46 (or later) – https://sourceforge.net/p/nsis
+  * Make sure makensis is in your PATH environmental variable – http://superuser.com/a/284351/195953
 
-  Alternatively, you can install NSIS through Chocolatey https://chocolatey.org/packages/nsis
+  Alternatively, you can install NSIS through Chocolatey – https://chocolatey.org/packages/nsis
+
+  $ choco install nsis
 
   Mac OS X
   --------
 
-  It's recommended to install makensis through Homebrew http://brew.sh/
+  It's recommended to install makensis through Homebrew – http://brew.sh/
 
   $ brew install nsis
 
