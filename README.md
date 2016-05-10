@@ -18,7 +18,13 @@ Before using this plugin, you must ensure that `makensis` is installed on your s
 
 #### Windows
 
-Download NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis) and run setup
+Download NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure makensis is in your [PATH environmental variable][path].
+
+Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
+
+```bash
+choco install nsis
+```
 
 #### Linux
 
@@ -34,17 +40,15 @@ Install `makensis` from your distribution's default package manager, for example
 
 #### Mac OS X
 
-Install `makensis` through [Homebrew](http://brew.sh/)sublim
+Install `makensis` through [Homebrew](http://brew.sh/):
 
    ``` bash
    # Homebrew
    brew install nsis
    ```
 
-**Note:** This plugin requires `makensis` 2.46 or later.
-
 ### Linter configuration
-In order for `makensis` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
+In order for `makensis` to be executed by SublimeLinter, you must [ensure that its path is available][path] to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once you have installed and configured `makensis`, you can proceed to install the SublimeLinter-contrib-makensis plugin if it is not yet installed.
 
@@ -78,5 +82,6 @@ Thank you for helping out!
 [docs]: http://sublimelinter.readthedocs.org
 [installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
 [locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
+[path]: http://superuser.com/a/284351/195953
 [pc]: https://sublime.wbond.net/installation
 [cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
