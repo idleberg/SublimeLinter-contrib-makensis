@@ -24,7 +24,7 @@ Download NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis)
 
 Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
 
-```bash
+``` bash
 choco install nsis
 ```
 
