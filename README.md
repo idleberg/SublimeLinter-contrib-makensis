@@ -32,22 +32,22 @@ choco install nsis
 
 Install `makensis` from your distribution's default package manager, for example:
 
-   ``` bash
-   # Debian
-   sudo apt-get install nsis
+``` bash
+# Debian
+sudo apt-get install nsis
 
-   # Red Hat
-   sudo dnf install nsis
-   ```
+# Red Hat
+sudo dnf install nsis
+```
 
 #### Mac OS X
 
 Install `makensis` through [Homebrew](http://brew.sh/):
 
-   ``` bash
-   # Homebrew
-   brew install nsis
-   ```
+``` bash
+# Homebrew
+brew install nsis
+```
 
 While `makensis` is also available on [MacPorts](https://trac.macports.org/browser/trunk/dports/devel/nsis/Portfile), it seems it's currently not maintained.
 
