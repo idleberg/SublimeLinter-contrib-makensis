@@ -41,14 +41,15 @@ sudo dnf install nsis
 ```
 
 #### macOS
-Install `makensis` through [Homebrew](http://brew.sh/):
+Install `makensis` through [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/):
 
 ``` bash
 # Homebrew
 brew install nsis
-```
 
-While `makensis` is also available on [MacPorts](https://trac.macports.org/browser/trunk/dports/devel/nsis/Portfile), it seems it's currently not maintained.
+# MacPorts
+port install nsis
+```
 
 ### Linter configuration
 In order for `makensis` to be executed by SublimeLinter, you must [ensure that its path is available][path] to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
