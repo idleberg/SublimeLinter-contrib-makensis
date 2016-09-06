@@ -40,7 +40,6 @@ class Makensis(Linter):
     line_col_base = (1, 1)
 
     def split_match(self, match):
-
         """
         Extract and return values from match.
 
