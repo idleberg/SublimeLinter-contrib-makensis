@@ -32,8 +32,8 @@ class Makensis(Linter):
 
     syntax = 'nsis'
     regex = (
-        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)\r?\n|(?P<message>[^\r?\n]+)\r?\n'
-        r'(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$)'
+        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)\r?\n'
+        r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$)'
     )
     multiline = True
     error_stream = util.STREAM_STDOUT
