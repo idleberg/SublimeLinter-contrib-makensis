@@ -27,13 +27,32 @@ class Makensis(Linter):
         version_re = r'(?P<version>\d+\.\d+)'
         version_requirement = '>= 2.46'
     else:
+        # Versioning on non-Windows is unreliable, often uses compile date
         cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
 
     syntax = 'nsis'
     regex = (
-        # r'(?P<warning>warning): (?P<message>.*) \(.*:(?P<line>\d+)\)'
-        r'(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$'
+        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)\r?\n|(?P<message>[^\r?\n]+)\r?\n'
+        r'(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$)'
     )
     multiline = True
     error_stream = util.STREAM_STDOUT
     line_col_base = (1, 1)
+
+    def split_match(self, match):
+
+        """
+        Extract and return values from match.
+
+        We override this method so that general errors that do not have
+        a line number can be placed at the beginning of the code.
+
+        """
+
+        match, line, col, error, warning, message, near = super().split_match(match)
+
+        if message is None:
+            message = str(match.groupdict()["warnMessage"])
+            line = int(match.groupdict()["warnLine"]) - 1
+
+        return match, line, col, error, warning, message, near
