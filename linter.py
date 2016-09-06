@@ -32,7 +32,7 @@ class Makensis(Linter):
 
     syntax = 'nsis'
     regex = (
-        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)\r?\n'
+        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)$'
         r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$)'
     )
     multiline = True
