@@ -27,7 +27,7 @@ class Makensis(Linter):
         version_re = r'(?P<version>\d+\.\d+)'
         version_requirement = '>= 2.46'
     else:
-        # Versioning on non-Windows is unreliable, often uses compile date
+        # Versioning on non-Windows is unreliable, sometimes uses compile date
         cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
 
     syntax = 'nsis'
