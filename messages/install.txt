@@ -15,8 +15,8 @@ Installation
 
     $ choco install nsis
 
-  Mac OS X
-  --------
+  macOS
+  -----
 
   It's recommended to install `makensis` through Homebrew – http://brew.sh/
 

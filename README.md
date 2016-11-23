@@ -16,11 +16,11 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [makensis]
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
-Before using this plugin, you must ensure that `makensis` is installed on your system. To install `makensis`, do the following:
+Before using this plugin, you must ensure that NSIS v2.46 (or higher) is installed on your system. To install it, do the following:
 
 #### Windows
 
-Download NSIS 2.46 (or later) from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure makensis is in your [PATH environmental variable][path].
+Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure `makensis` is in your [PATH environmental variable][path].
 
 Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
 
@@ -30,7 +30,7 @@ choco install nsis
 
 #### Linux
 
-Install `makensis` from your distribution's default package manager, for example:
+Install NSIS from your distribution's default package manager, for example:
 
 ``` bash
 # Debian
@@ -41,7 +41,7 @@ sudo dnf install nsis
 ```
 
 #### macOS
-Install `makensis` through [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/):
+Install NSIS using [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/):
 
 ``` bash
 # Homebrew
