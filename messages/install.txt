@@ -8,7 +8,7 @@ Installation
   Windows
   -------
 
-  * Install NSIS 2.46 (or later) – https://sourceforge.net/p/nsis
+  * Install NSIS 2.46 (or higher) – https://sourceforge.net/p/nsis
   * Make sure `makensis` is in your PATH environmental variable – http://superuser.com/a/284351/195953
 
   Alternatively, you can install NSIS through Chocolatey – https://chocolatey.org/packages/nsis
@@ -18,14 +18,14 @@ Installation
   macOS
   -----
 
-  It's recommended to install `makensis` through Homebrew – http://brew.sh/
+  It's recommended to install NSIS using Homebrew – http://brew.sh/
 
     $ brew install nsis
 
   Linux
   -----
 
-  Install `makensis` useing the default package manager
+  Install NSIS using the default package manager
 
     # Debian / Ubuntu
     $ sudo apt-get install nsis
