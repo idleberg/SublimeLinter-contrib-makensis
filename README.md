@@ -16,7 +16,7 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [makensis]
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
-Before using this plugin, you must ensure that NSIS v2.46 (or higher) is installed on your system. To install it, do the following:
+Before using this plugin, you must ensure that NSIS v3.0 (or higher) is installed on your system. To install it, do the following:
 
 #### Windows
 
