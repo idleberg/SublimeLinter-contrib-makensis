@@ -3,7 +3,7 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Jan T. Sott
-# Copyright (c) 2016 Jan T. Sott
+# Copyright (c) 2016, 2917 Jan T. Sott
 #
 # https://github.com/idleberg/SublimeLinter-contrib-makensis
 #
@@ -21,14 +21,10 @@ class Makensis(Linter):
 
     """Provides an interface to the makensis executable."""
 
-    if _platform == "win32":
-        cmd = ('makensis', '/V2', '@', '/X!error "Abort linting"')
-        version_args = '/VERSION'
-        version_re = r'(?P<version>\d+\.\d+)'
-        version_requirement = '>= 2.46'
-    else:
-        # Versioning on non-Windows is unreliable, sometimes uses compile date
-        cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
+    cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
+    version_args = '-VERSION'
+    version_re = r'(?P<version>\d+\.\d+)'
+    version_requirement = '>= 3.0'
 
     syntax = 'nsis'
     regex = (
