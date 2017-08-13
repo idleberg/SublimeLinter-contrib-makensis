@@ -3,7 +3,7 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Jan T. Sott
-# Copyright (c) 2016, 2917 Jan T. Sott
+# Copyright (c) 2016, 2017 Jan T. Sott
 #
 # https://github.com/idleberg/SublimeLinter-contrib-makensis
 #
@@ -14,7 +14,6 @@
 """This module exports the Makensis plugin class."""
 
 from SublimeLinter.lint import Linter, util
-from sys import platform as _platform
 
 
 class Makensis(Linter):
