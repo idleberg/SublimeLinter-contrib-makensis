@@ -31,7 +31,7 @@ class Makensis(Linter):
         r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$)'
     )
     multiline = True
-    error_stream = util.STREAM_STDOUT
+    error_stream = util.STREAM_BOTH
     line_col_base = (1, 1)
 
     def split_match(self, match):
