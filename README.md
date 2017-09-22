@@ -52,7 +52,7 @@ brew install nsis
 port install nsis
 ```
 
-**Note:** As of v3.02.1, the macOS builds use the correct version string rather than build date!
+**Note:** As of v3.02.1, the macOS builds should use the correct version string rather than build date
 
 ### Linter configuration
 In order for `makensis` to be executed by SublimeLinter, you must [ensure that its path is available][path] to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
