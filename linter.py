@@ -22,8 +22,8 @@ class Makensis(Linter):
 
     cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
     version_args = '-VERSION'
-    version_re = r'(?P<version>\d+\.\d+)'
-    version_requirement = '>= 3.0'
+    version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
+    version_requirement = '>= 3.02.1'
 
     syntax = 'nsis'
     regex = (
