@@ -51,7 +51,6 @@ class Makensis(Linter):
             warnMessage = str(match.groupdict()["warnMessage"])
 
             if sectionMessage:
-
                 message = sectionMessage
                 line = self.view.rowcol(self.view.size())[0]
 
