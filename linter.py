@@ -36,11 +36,7 @@ class Makensis(Linter):
     line_col_base = (1, 1)
 
     def split_match(self, match):
-        """
-        Extract and return values from match.
-
-        """
-
+        """Extract and return values from match."""
         match, line, col, error, warning, message, near = (
             super().split_match(match)
         )
@@ -58,7 +54,6 @@ class Makensis(Linter):
             return match, line, col, error, warning, message, near
 
         sectionMessage = str(match.groupdict()["sectionMessage"])
-        countLines = self.view.rowcol(self.view.size())[0]
 
         if sectionMessage:
             message = sectionMessage
