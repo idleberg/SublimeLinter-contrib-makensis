@@ -39,23 +39,28 @@ class Makensis(Linter):
         """
         Extract and return values from match.
 
-        We override this method so that general errors that do not have
-        a line number can be placed at the beginning of the code.
-
         """
 
-        match, line, col, error, warning, message, near = super().split_match(match)
+        match, line, col, error, warning, message, near = (
+            super().split_match(match)
+        )
 
-        if message is None:
-            sectionMessage = str(match.groupdict()["sectionMessage"])
-            warnMessage = str(match.groupdict()["warnMessage"])
+        if message:
+            return match, line, col, error, warning, message, near
 
-            if sectionMessage:
-                message = sectionMessage
-                line = self.view.rowcol(self.view.size())[0]
+        warnMessage = str(match.groupdict()["warnMessage"])
+        warnLine = match.groupdict()["warnLine"]
 
-            elif warnMessage:
-                message = warnMessage
-                line = int(match.groupdict()["warnLine"]) - 1
+        if warnMessage and warnLine:
+            message = warnMessage
+            line = int(warnLine) - 1
 
-        return match, line, col, error, warning, message, near
+            return match, line, col, error, warning, message, near
+
+        sectionMessage = str(match.groupdict()["sectionMessage"])
+        countLines = self.view.rowcol(self.view.size())[0]
+
+        if sectionMessage:
+            message = sectionMessage
+            line = self.view.rowcol(self.view.size())[0]
+            return match, line, col, error, warning, message, near
