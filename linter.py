@@ -3,7 +3,7 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Jan T. Sott
-# Copyright (c) 2016, 2017 Jan T. Sott
+# Copyright (c) 2016-2018 Jan T. Sott
 #
 # https://github.com/idleberg/SublimeLinter-contrib-makensis
 #
