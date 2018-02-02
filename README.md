@@ -77,8 +77,8 @@ Bring up the [Command Palette][cmd] to configure the plugin. The following optio
 
 Option      | Default | Description 
 ------------|---------|------------
-`ppo_mode`  | `true`  | Lints much faster, but ignores warning. Equivalent of `-PPO` flag.
-`safe_mode` | `false` | Treats warnings as errors. Equivalent of `-WX` flag.
+`ppo_mode`  | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
+`safe_mode` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
 
 ## Contributing
 
