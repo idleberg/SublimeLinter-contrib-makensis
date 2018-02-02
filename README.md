@@ -13,6 +13,7 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [makensis]
 *Linter in action (using [Hopscotch](https://github.com/idleberg/Hopscotch) color scheme)*
 
 ## Installation
+
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
@@ -54,12 +55,14 @@ port install nsis
 
 **Note:** As of v3.02.1, the macOS builds should use the correct version string rather than build date
 
-### Linter configuration
+### Linter Configuration
+
 In order for `makensis` to be executed by SublimeLinter, you must [ensure that its path is available][path] to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once you have installed and configured `makensis`, you can proceed to install the SublimeLinter-contrib-makensis plugin if it is not yet installed.
 
-### Plugin installation
+### Plugin Installation
+
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
 
 To install via Package Control, do the following:
@@ -68,7 +71,17 @@ To install via Package Control, do the following:
 
 1. When the plugin list appears, type `makensis`. Among the entries you should see `SublimeLinter-contrib-makensis`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
+### Plugin Configuration
+
+Bring up the [Command Palette][cmd] to configure the plugin. The following options are available:
+
+Option      | Default | Description 
+------------|---------|------------
+`ppo_mode`  | `true`  | The pre-process mode lints much faster, but ignores warning (unless in strict mode)
+`safe_mode` | `false` | Treats warnings as errors, requires NSIS v3.0 (or higher)
+
 ## Contributing
+
 If you would like to contribute enhancements or fixes, please do the following:
 
 1. Fork the plugin repository.

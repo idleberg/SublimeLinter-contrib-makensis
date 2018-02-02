@@ -20,7 +20,7 @@ class Makensis(Linter):
 
     """Provides an interface to the makensis executable."""
 
-    cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
+    cmd = None
     version_args = '-VERSION'
     version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
     version_requirement = '>= 3.02.1'
@@ -34,6 +34,27 @@ class Makensis(Linter):
     error_stream = util.STREAM_BOTH
     line_col_base = (1, 1)
 
+    def cmd(self):
+        """ Create the command """
+        settings = Linter.get_view_settings(self)
+
+        # Default arguments
+        cmd = ['makensis', '-V2']
+
+        # Is strict mode?
+        if settings.get('safe_mode') is True:
+            cmd.append('-WX')
+
+        # Is PPO mode?
+        if settings.get('ppo_mode') in [True, None]:
+            cmd.append('-PPO')
+            cmd.append('@')
+        else:
+            cmd.append('@')
+            cmd.append('-X!error "Abort linting"')
+
+        return cmd
+
     def split_match(self, match):
         """Extract and return values from match."""
         match, line, col, error, warning, message, near = (
@@ -42,6 +63,11 @@ class Makensis(Linter):
 
         if message:
             return match, line, col, error, warning, message, near
+
+        # Is strict mode?
+        settings = Linter.get_view_settings(self)
+        if settings.get('safe_mode') is True:
+            error = warning
 
         warnMessage = str(match.groupdict()["warnMessage"])
         warnLine = match.groupdict()["warnLine"]
