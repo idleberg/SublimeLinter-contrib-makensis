@@ -17,7 +17,6 @@ from SublimeLinter.lint import Linter, util
 
 
 class Makensis(Linter):
-
     """Provides an interface to the makensis executable."""
 
     cmd = None
@@ -35,7 +34,7 @@ class Makensis(Linter):
     line_col_base = (1, 1)
 
     def cmd(self):
-        """Create the command"""
+        """Create the command."""
         settings = Linter.get_view_settings(self)
 
         # Default arguments
