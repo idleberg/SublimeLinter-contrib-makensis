@@ -20,16 +20,15 @@ class Makensis(Linter):
 
     """Provides an interface to the makensis executable."""
 
-    cmd = ('makensis', '-V2', '@', '-ppo')
+    cmd = ('makensis', '-V2', '@', '-X!error "Abort linting"')
     version_args = '-VERSION'
     version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
     version_requirement = '>= 3.02.1'
 
     syntax = 'nsis'
     regex = (
-        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)$'
-        r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process$'
-        r'|(?P<sectionError>Error:) (?P<sectionMessage>.* EOF)$)'
+        r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)'
+        r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process)'
     )
     multiline = True
     error_stream = util.STREAM_BOTH
@@ -51,11 +50,4 @@ class Makensis(Linter):
             message = warnMessage
             line = int(warnLine) - 1
 
-            return match, line, col, error, warning, message, near
-
-        sectionMessage = str(match.groupdict()["sectionMessage"])
-
-        if sectionMessage:
-            message = sectionMessage
-            line = self.view.rowcol(self.view.size())[0]
-            return match, line, col, error, warning, message, near
+        return match, line, col, error, warning, message, near
