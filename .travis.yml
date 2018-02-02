@@ -16,6 +16,6 @@ install:
 # command to run tests
 script:
   - flake8 . --max-line-length=160
-  - pep257 . --ignore=D202,D211
+  - pep257
 notifications:
   email: false
