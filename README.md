@@ -75,10 +75,10 @@ To install via Package Control, do the following:
 
 Bring up the [Command Palette][cmd] to configure the plugin. The following options are available:
 
-Option      | Default | Description 
-------------|---------|------------
-`ppo_mode`  | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
-`safe_mode` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
+Option        | Default | Description 
+--------------|---------|------------
+`ppo_mode`    | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
+`strict_mode` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
 
 ## Contributing
 
