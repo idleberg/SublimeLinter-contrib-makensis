@@ -35,7 +35,7 @@ class Makensis(Linter):
     line_col_base = (1, 1)
 
     def cmd(self):
-        """ Create the command """
+        """Create the command"""
         settings = Linter.get_view_settings(self)
 
         # Default arguments
