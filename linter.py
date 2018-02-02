@@ -42,11 +42,11 @@ class Makensis(Linter):
         cmd = ['makensis', '-V2']
 
         # Is strict mode?
-        if settings.get('strict_mode') is True:
+        if settings.get('strict') is True:
             cmd.append('-WX')
 
         # Is PPO mode?
-        if settings.get('ppo_mode') in [True, None]:
+        if settings.get('ppo') in [True, None]:
             cmd.append('-PPO')
             cmd.append('@')
         else:
@@ -66,7 +66,7 @@ class Makensis(Linter):
 
         # Is strict mode?
         settings = Linter.get_view_settings(self)
-        if settings.get('strict_mode') is True:
+        if settings.get('strict') is True:
             error = warning
 
         warnMessage = str(match.groupdict()["warnMessage"])
