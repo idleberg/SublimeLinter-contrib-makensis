@@ -73,7 +73,7 @@ To install via Package Control, do the following:
 
 ### Plugin Configuration
 
-Bring up the [Command Palette][cmd] to configure the plugin. The following options are available:
+To configure this plugin, bring up the [Command Palette][cmd] and type `Preferences: SublimeLinter Settings`. The following options are available:
 
 Option   | Default | Description 
 ---------|---------|------------
