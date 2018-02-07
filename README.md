@@ -80,6 +80,18 @@ Option   | Default | Description
 `ppo`    | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
 `strict` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
 
+**Example:**
+
+```json
+"user": {
+    "linters": {
+        "makensis": {
+            "ppo_mode": true,
+            "safe_mode": false
+        }
+    }
+}
+
 ## Contributing
 
 If you would like to contribute enhancements or fixes, please do the following:
