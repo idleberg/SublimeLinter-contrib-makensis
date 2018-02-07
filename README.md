@@ -91,6 +91,7 @@ Option   | Default | Description
         }
     }
 }
+```
 
 ## Contributing
 
