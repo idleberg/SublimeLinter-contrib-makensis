@@ -57,7 +57,7 @@ class Makensis(Linter):
             else:
                 out_file = 'OutFile /dev/null/'
 
-            cmd.append('-O' + out_file)
+            cmd.append('-X' + out_file)
 
         return cmd
 
