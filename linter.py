@@ -21,6 +21,7 @@ class Makensis(Linter):
     """Provides an interface to the makensis executable."""
 
     cmd = None
+    executable = 'makensis'
     version_args = '-VERSION'
     version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
     version_requirement = '>= 3.02.1'
@@ -52,7 +53,7 @@ class Makensis(Linter):
             cmd.append('@')
 
             # Don't write installer
-            if platform == "win32":
+            if platform == 'win32':
                 out_file = 'OutFile NUL'
             else:
                 out_file = 'OutFile /dev/null/'
