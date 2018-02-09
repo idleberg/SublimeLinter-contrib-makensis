@@ -86,8 +86,8 @@ Option   | Default | Description
 "user": {
     "linters": {
         "makensis": {
-            "ppo_mode": true,
-            "safe_mode": false
+            "ppo": true,
+            "strict": false
         }
     }
 }
