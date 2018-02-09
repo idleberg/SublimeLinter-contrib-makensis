@@ -14,6 +14,7 @@
 """This module exports the Makensis plugin class."""
 
 from SublimeLinter.lint import Linter, util
+from sys import platform
 
 
 class Makensis(Linter):
@@ -23,7 +24,6 @@ class Makensis(Linter):
     version_args = '-VERSION'
     version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
     version_requirement = '>= 3.02.1'
-
     syntax = 'nsis'
     regex = (
         r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)'
@@ -50,7 +50,14 @@ class Makensis(Linter):
             cmd.append('@')
         else:
             cmd.append('@')
-            cmd.append('-X!error "Abort linting"')
+
+            # Don't write installer
+            if platform == "win32":
+                out_file = 'OutFile NUL'
+            else:
+                out_file = 'OutFile /dev/null/'
+
+            cmd.append('-O' + out_file)
 
         return cmd
 
