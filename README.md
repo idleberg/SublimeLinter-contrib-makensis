@@ -83,13 +83,18 @@ Option   | Default | Description
 **Example:**
 
 ```json
-"user": {
+{
+  "user": {
     "linters": {
-        "makensis": {
-            "ppo_mode": true,
-            "safe_mode": false
-        }
+      "makensis": {
+        "@disable": false,
+        "args": [],
+        "excludes": [],
+        "ppo_mode": true,
+        "safe_mode": false
+      }
     }
+  }
 }
 ```
 
