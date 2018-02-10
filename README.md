@@ -90,8 +90,8 @@ Option   | Default | Description
         "@disable": false,
         "args": [],
         "excludes": [],
-        "ppo_mode": true,
-        "safe_mode": false
+        "ppo": true,
+        "strict": false
       }
     }
   }
