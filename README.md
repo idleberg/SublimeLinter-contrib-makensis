@@ -14,9 +14,10 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [makensis]
 
 ## Installation
 
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
+SublimeLinter 4 must be installed in order to use this plugin. If SublimeLinter 4 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
+
 Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system. To install it, do the following:
 
 #### Windows
@@ -84,15 +85,13 @@ Option   | Default | Description
 
 ```json
 {
-  "user": {
-    "linters": {
-      "makensis": {
-        "@disable": false,
-        "args": [],
-        "excludes": [],
-        "ppo": true,
-        "strict": false
-      }
+  "linters": {
+    "makensis": {
+      "@disable": false,
+      "args": [],
+      "excludes": [],
+      "ppo": true,
+      "strict": false
     }
   }
 }
