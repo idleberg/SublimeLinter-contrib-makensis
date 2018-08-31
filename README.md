@@ -22,12 +22,12 @@ Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is insta
 
 #### Windows
 
-Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure `makensis` is in your [PATH environmental variable][path].
+Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Once completed, you need to add the installation folder to your [environmental variable](http://superuser.com/a/284351/195953) manually.
 
-Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
+Alternatively, you can install NSIS using the [Scoop](https://github.com/NSIS-Dev/scoop-nsis) package manager:
 
-``` bash
-choco install nsis
+```sh
+$ scoop install nsis/nsis
 ```
 
 #### Linux
@@ -76,7 +76,7 @@ To install via Package Control, do the following:
 
 To configure this plugin, bring up the [Command Palette][cmd] and type `Preferences: SublimeLinter Settings`. The following options are available:
 
-Option   | Default | Description 
+Option   | Default | Description
 ---------|---------|------------
 `ppo`    | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
 `strict` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
