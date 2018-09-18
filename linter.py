@@ -22,10 +22,12 @@ class Makensis(Linter):
 
     cmd = None
     executable = 'makensis'
+    defaults = {
+        'selector': 'source.nsis'
+    }
     version_args = '-VERSION'
     version_re = r'(?P<version>\d+\.\d+(\.\d+)?)'
     version_requirement = '>= 3.02.1'
-    syntax = 'nsis'
     regex = (
         r'((?P<warning>warning): (?P<warnMessage>.*) \(.*:(?P<warnLine>\d+)\)'
         r'|(?P<message>[^\r?\n]+)\r?\n(?P<error>Error) in script "[^"]+" on line (?P<line>\d+) -- aborting creation process)'
