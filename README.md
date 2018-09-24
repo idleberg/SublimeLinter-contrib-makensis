@@ -9,7 +9,7 @@ This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeL
 
 ## Prerequisites
 
-Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system.
+Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system. To do so, follow these steps:
 
 #### Windows
 
