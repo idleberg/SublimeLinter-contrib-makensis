@@ -18,6 +18,7 @@ from sys import platform
 
 
 class Makensis(Linter):
+
     """Provides an interface to the makensis executable."""
 
     cmd = None
