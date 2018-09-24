@@ -1,24 +1,15 @@
-SublimeLinter-contrib-makensis
-================================
+# SublimeLinter-contrib-makensis
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![The MIT License](https://flat.badgen.net/badge/license/MIT/blue)](https://opensource.org/licenses/MIT)
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/SublimeLinter-contrib-makensis.svg?style=flat-square)](https://packagecontrol.io/packages/SublimeLinter-contrib-makensis)
-[![GitHub](https://img.shields.io/github/release/idleberg/SublimeLinter-contrib-makensis.svg?style=flat-square)](https://github.com/idleberg/SublimeLinter-contrib-makensis/releases)
-[![Travis CI](https://img.shields.io/travis/idleberg/SublimeLinter-contrib-makensis/master.svg?style=flat-square)](https://travis-ci.org/idleberg/SublimeLinter-contrib-makensis)
+[![GitHub](https://flat.badgen.net/github/release/idleberg/SublimeLinter-contrib-makensis)](https://github.com/idleberg/SublimeLinter-contrib-makensis/releases)
+[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/generator-atom-package-coffeescript)](https://circleci.com/gh/idleberg/SublimeLinter-contrib-makensis)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [makensis](http://nsis.sourceforge.net/Docs/Chapter3.html). It will be used with NSIS scripts.
 
-![Screenshot](https://raw.githubusercontent.com/idleberg/SublimeLinter-contrib-makensis/master/screenshot.png)
+## Prerequisites
 
-*Linter in action (using [Hopscotch](https://github.com/idleberg/Hopscotch) color scheme)*
-
-## Installation
-
-SublimeLinter 4 must be installed in order to use this plugin. If SublimeLinter 4 is not installed, please follow the instructions [here][installation].
-
-### Linter installation
-
-Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system. To install it, do the following:
+Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system.
 
 #### Windows
 
@@ -54,25 +45,26 @@ brew install nsis
 port install nsis
 ```
 
-**Note:** As of v3.02.1, the macOS builds should use the correct version string rather than build date
+## Installation
 
-### Linter Configuration
+### Package Control
 
-In order for `makensis` to be executed by SublimeLinter, you must [ensure that its path is available][path] to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
+1. Make sure you have [Package Control](https://packagecontrol.io/) installed
+2. Choose *“Install Package”* from the Command Palette (<kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>)
+3. Type *“SublimeLinter-contrib-makensis”* and press <kbd>Enter</kbd>
 
-Once you have installed and configured `makensis`, you can proceed to install the SublimeLinter-contrib-makensis plugin if it is not yet installed.
+With the [`auto_upgrade`](https://packagecontrol.io/docs/settings#setting-auto_upgrade) setting enabled, Package Control will keep all installed packages up-to-date!
 
-### Plugin Installation
+### Using Git
 
-Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
+1. Change to your Sublime Text `Packages` directory
+2. Clone repository `git clone https://github.com/idleberg/SublimeLinter-contrib-makensis.git SublimeLinter-contrib-makensis`
 
-To install via Package Control, do the following:
+## Settings
 
-1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
+Please refer to the official documentation in order to tweak the [SublimeLinter settings](http://sublimelinter.readthedocs.org/en/latest/settings.html) or [linter settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-1. When the plugin list appears, type `makensis`. Among the entries you should see `SublimeLinter-contrib-makensis`. If that entry is not highlighted, use the keyboard or mouse to select it.
-
-### Plugin Configuration
+### Plugin Settings
 
 To configure this plugin, bring up the [Command Palette][cmd] and type `Preferences: SublimeLinter Settings`. The following options are available:
 
@@ -97,28 +89,6 @@ Option   | Default | Description
 }
 ```
 
-## Contributing
+## License
 
-If you would like to contribute enhancements or fixes, please do the following:
-
-1. Fork the plugin repository.
-1. Hack on a separate topic branch created from the latest `master`.
-1. Commit and push the topic branch.
-1. Make a pull request.
-1. Be patient.  ;-)
-
-Please note that modifications should follow these coding guidelines:
-
-- Indent is 4 spaces.
-- Code should pass flake8 and pep257 linters.
-- Vertical whitespace helps readability, don’t be afraid to use it.
-- Please use descriptive variable names, no abbreviations unless they are very well known.
-
-Thank you for helping out!
-
-[docs]: http://sublimelinter.readthedocs.org
-[installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
-[locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
-[path]: http://superuser.com/a/284351/195953
-[pc]: https://sublime.wbond.net/installation
-[cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
+This work is licensed under the [The MIT License](LICENSE)
