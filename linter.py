@@ -51,9 +51,7 @@ class Makensis(Linter):
 
         # Is strict mode?
         strict_flags = ['-WX', '/WX']
-        if (
-            settings.get('strict') is True and any(x in settings.get('args') for x in strict_flags)
-        ):
+        if settings.get('strict') is True and any(x in settings.get('args') for x in strict_flags):
             cmd.append('-WX')
 
         # Is PPO mode?
