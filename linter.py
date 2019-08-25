@@ -54,10 +54,10 @@ class Makensis(Linter):
 
         # Is PPO mode?
         if (
-            settings.get('ppo') in [True, None] \
-            and '-PPO' not in settings.get('args') \
-            and '/PPO' not in settings.get('args') \
-            and '-SAFEPPO' not in settings.get('args') \
+            settings.get('ppo') in [True, None]
+            and '-PPO' not in settings.get('args')
+            and '/PPO' not in settings.get('args')
+            and '-SAFEPPO' not in settings.get('args')
             and '/SAFEPPO' not in settings.get('args')
         ):
             cmd.append('-PPO')
