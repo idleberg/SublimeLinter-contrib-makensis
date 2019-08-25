@@ -46,7 +46,7 @@ class Makensis(Linter):
 
         # Set verbosity
         verbose_flags = ['-V0', '-V1', '-V2', '-V4', '-V4', '/V0', '/V1', '/V2', '/V4', '/V4']
-        if not any(x in settings.get('args') for x in verbose_flags)
+        if not any(x in settings.get('args') for x in verbose_flags):
             cmd.append('-V2')
 
         # Is strict mode?
