@@ -44,22 +44,21 @@ class Makensis(Linter):
         # Default arguments
         cmd = ['makensis', '-V2']
 
+        # Set verbosity
+        verbose_flags = ['-V0', '-V1', '-V2', '-V4', '-V4', '/V0', '/V1', '/V2', '/V4', '/V4']
+        if not any(x in settings.get('args') for x in verbose_flags)
+            cmd.append('-V2')
+
         # Is strict mode?
+        strict_flags = ['-WX', '/WX']
         if (
-            settings.get('strict') is True
-            and '-WX' not in settings.get('args')
-            and '/WX' not in settings.get('args')
+            settings.get('strict') is True and any(x in settings.get('args') for x in strict_flags)
         ):
             cmd.append('-WX')
 
         # Is PPO mode?
-        if (
-            settings.get('ppo') in [True, None]
-            and '-PPO' not in settings.get('args')
-            and '/PPO' not in settings.get('args')
-            and '-SAFEPPO' not in settings.get('args')
-            and '/SAFEPPO' not in settings.get('args')
-        ):
+        ppo_flags = ['-PPO', '-SAFEPPO', '/PPO', '/SAFEPPO']
+        if settings.get('ppo') in [True, None] and any(x in settings.get('args') for x in ppo_flags):
             cmd.append('-PPO')
             cmd.append('@')
         else:
