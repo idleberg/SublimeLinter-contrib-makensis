@@ -5,27 +5,37 @@ This linter plugin for SublimeLinter uses `makensis` to lint NSIS scripts
 Installation
 ------------
 
+  Before using this plugin, you must ensure that NSIS v3.02.1 (or higher) is installed on your system. To do so, follow these steps:
+
   Windows
   -------
 
   * Install NSIS v3.02.1 (or higher) – https://sourceforge.net/p/nsis
   * Make sure `makensis` is in your PATH environmental variable – http://superuser.com/a/284351/195953
 
-  Alternatively, you can install NSIS through Chocolatey – https://chocolatey.org/packages/nsis
+  Alternatively, you can install NSIS through the Chocolatey or Scoop package managers
 
+    # Chocolatey
     $ choco install nsis
+
+    # Scoop
+    $ scoop install nsis/nsis
 
   macOS
   -----
 
-  It's recommended to install NSIS v3.02.1 (or higher) using Homebrew – http://brew.sh/
+  It's recommended to install using Homebrew or MacPorts
 
+    # Homebrew
     $ brew install nsis
+
+    # MacPorts
+    $ port install nsis
 
   Linux
   -----
 
-  Install NSIS v3.02.1 (or higher) using the default package manager
+  Install NSIS from your distribution's default package manager. Note that NSIS v3.x is still marked experimental on Debian.
 
     # Debian / Ubuntu
     $ sudo apt-get install nsis

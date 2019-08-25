@@ -70,7 +70,7 @@ To configure this plugin, bring up the [Command Palette][cmd] and type `Preferen
 
 Option   | Default | Description
 ---------|---------|------------
-`ppo`    | `true`  | Lints much faster, but ignores warning (equivalent of `-PPO` flag)
+`ppo`    | `true`  | Lints much faster, but ignores warnings (equivalent of `-PPO` flag)
 `strict` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
 
 **Example:**
