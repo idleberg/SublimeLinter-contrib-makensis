@@ -45,11 +45,17 @@ class Makensis(Linter):
         cmd = ['makensis', '-V2']
 
         # Is strict mode?
-        if settings.get('strict') is True:
+        if settings.get('strict') is True \
+        and '-WX' not in settings.get('args') \
+        and '/WX' not in settings.get('args'):
             cmd.append('-WX')
 
         # Is PPO mode?
-        if settings.get('ppo') in [True, None]:
+        if settings.get('ppo') in [True, None] \
+        and '-PPO' not in settings.get('args') \
+        and '/PPO' not in settings.get('args') \
+        and '-SAFEPPO' not in settings.get('args') \
+        and '/SAFEPPO' not in settings.get('args'):
             cmd.append('-PPO')
             cmd.append('@')
         else:
