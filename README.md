@@ -27,7 +27,7 @@ Install NSIS from your distribution's default package manager, for example:
 
 ``` bash
 # Debian
-sudo apt-get -t experimental install nsis
+sudo apt-get -y install -t unstable nsis
 
 # Red Hat
 sudo dnf install nsis
