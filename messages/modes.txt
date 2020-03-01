@@ -2,4 +2,4 @@ Linter Modes
 ------------
 
 As of v0.8, the settings for the Pre-Process Mode have been changed. The old
-`ppo` is no longer supporter, please use the new `preprocessMode` instead!
+`ppo` is no longer supporter, please use the new `preprocess_mode` instead!
