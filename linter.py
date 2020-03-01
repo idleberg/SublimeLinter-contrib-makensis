@@ -46,7 +46,8 @@ class Makensis(Linter):
 
         linter_args = settings.get('args') or []
         strict = settings.get('strict') or False
-        preprocess_mode = '-{}'.format(settings.get('preprocessMode') or 'SAFEPPO')
+        preprocess_mode = settings.get('preprocess_mode')
+        preprocess_mode = "-{}".format(preprocess_mode) if str(preprocess_mode).upper() in ('PPO', 'SAFEPPO') else False
 
         cmd = cmd + linter_args
 
@@ -62,7 +63,7 @@ class Makensis(Linter):
 
         # Is PPO mode?
         ppo_flags = ['-PPO', '-SAFEPPO', '/PPO', '/SAFEPPO']
-        if any(x in preprocess_mode for x in ppo_flags):
+        if preprocess_mode and any(x in preprocess_mode for x in ppo_flags):
             cmd.append(preprocess_mode)
             cmd.append("${file}")
         else:

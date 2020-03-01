@@ -1,9 +1,5 @@
 Linter Modes
 ------------
 
-As of v0.6, this plugin offers several new of modes to lint your NSIS scripts:
-
-- pre-process mode (PPO): much faster linting, but ignores warning
-- strict-mode: treats warnings as errors
-
-Both modes can be activated in your SublimeLinter settings.
+As of v0.8, the settings for the Pre-Process Mode have been changed. The old
+`ppo` is no longer supporter, please use the new `preprocessMode` instead!
