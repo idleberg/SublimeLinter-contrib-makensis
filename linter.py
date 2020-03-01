@@ -42,25 +42,31 @@ class Makensis(Linter):
         settings = Linter.get_view_settings(self)
 
         # Default arguments
-        cmd = ['makensis', '-V2']
+        cmd = ['makensis']
+
+        linter_args = settings.get('args') or []
+        strict = settings.get('strict') or False
+        preprocess_mode = '-{}'.format(settings.get('preprocessMode') or 'SAFEPPO')
+
+        cmd = cmd + linter_args
 
         # Set verbosity
         verbose_flags = ['-V0', '-V1', '-V2', '-V4', '-V4', '/V0', '/V1', '/V2', '/V4', '/V4']
-        if not any(x in settings.get('args') for x in verbose_flags):
+        if not any(x in cmd for x in verbose_flags):
             cmd.append('-V2')
 
         # Is strict mode?
         strict_flags = ['-WX', '/WX']
-        if settings.get('strict') is True and any(x in settings.get('args') for x in strict_flags):
+        if strict and not any(x in cmd for x in strict_flags):
             cmd.append('-WX')
 
         # Is PPO mode?
         ppo_flags = ['-PPO', '-SAFEPPO', '/PPO', '/SAFEPPO']
-        if settings.get('ppo') in [True, None] and any(x in settings.get('args') for x in ppo_flags):
-            cmd.append('-PPO')
-            cmd.append('@')
+        if any(x in preprocess_mode for x in ppo_flags):
+            cmd.append(preprocess_mode)
+            cmd.append("${file}")
         else:
-            cmd.append('@')
+            cmd.append("${file}")
 
             # Don't write installer
             if platform == 'win32':

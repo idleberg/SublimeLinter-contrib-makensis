@@ -66,12 +66,12 @@ Please refer to the official documentation in order to tweak the [SublimeLinter 
 
 ### Plugin Settings
 
-To configure this plugin, bring up the [Command Palette][cmd] and type `Preferences: SublimeLinter Settings`. The following options are available:
+To configure this plugin, bring up the Command Palette and type `Preferences: SublimeLinter Settings`. The following options are available:
 
-Option   | Default | Description
----------|---------|------------
-`ppo`    | `true`  | Lints much faster, but ignores warnings (equivalent of `-PPO` flag)
-`strict` | `false` | Treats warnings as errors (equivalent of `-WX` flag)
+Option           | Default    | Description
+-----------------|------------|------------
+`preprocessMode` | `SAFEPPO`  | Lints much faster, but ignores warnings (equivalent of `-PPO` flag)
+`strict`         | `false`    | Treats warnings as errors (equivalent of `-WX` flag)
 
 **Example:**
 
@@ -82,7 +82,7 @@ Option   | Default | Description
       "@disable": false,
       "args": [],
       "excludes": [],
-      "ppo": true,
+      "preprocessMode": "SAFEPPO",
       "strict": false
     }
   }
